@@ -53,7 +53,7 @@ const NavBar = () => {
 
                 <Link 
               to="/career" 
-              className={`block px-4 py-3 rounded-md text-lg font-medium transition duration-300 ${isActive('/contact')}`}
+              className={`block px-4 py-3 rounded-md text-lg font-medium transition duration-300 ${isActive('/career')}`}
               onClick={() => setIsOpen(false)}
             >
               Career

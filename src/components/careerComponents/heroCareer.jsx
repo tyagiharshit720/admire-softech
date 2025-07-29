@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Career = () => {
+const heroCareer = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Career = () => {
   )
 }
 
-export default Career
+export default heroCareer
