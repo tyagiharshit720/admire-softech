@@ -6,6 +6,9 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Career from './pages/Career';
 import ApplicationForm from './forms/ApplicationForm';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
+import Portfolio from './pages/Portfolio';
 
 const App = () => {
   return (
@@ -17,9 +20,9 @@ const App = () => {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/career" element={<Career />} />
         <Route path="/application-form" element={<ApplicationForm />} />
-
-
-
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="portfolio" element={<Portfolio />} />
         
         
 
