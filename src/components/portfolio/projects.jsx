@@ -1,113 +1,150 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  ServerIcon,
+  CodeBracketIcon,
+  DevicePhoneMobileIcon,
+  MagnifyingGlassCircleIcon,
+} from '@heroicons/react/24/outline';
 
-const projects = [
+const services = [
   {
-    title: 'Startup Landing Page',
-    description: 'Modern landing page for a fictional startup.',
-    image: 'https://via.placeholder.com/400x240?text=Startup+Landing',
-    tech: ['React', 'Tailwind', 'Node.js'],
-    status: 'Demo',
+    title: 'PHP & MySQL Development',
+    icon: ServerIcon,
+    image:
+      'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-react/dashboard-page.png',
+    description:
+      'PHP is a server-side programming language that creates dynamic web pages. MySQL securely stores all your website’s data. Together, they build interactive websites where user data can be saved, updated, and retrieved easily — like contact forms, user logins, and product catalogs.',
+    points: [
+      'Server-side scripting for dynamic content',
+      'Secure data storage and management',
+      'Supports user authentication and forms',
+    ],
   },
   {
-    title: 'E-commerce UI',
-    description: 'Responsive shopping site with checkout flow.',
-    image: 'https://via.placeholder.com/400x240?text=E-commerce+UI',
-    tech: ['Vue.js', 'Strapi'],
-    status: 'Demo',
+    title: 'React & Node.js Applications',
+    icon: CodeBracketIcon,
+    image: 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-react/dashboard-page.png',
+    description:
+      'React builds fast, interactive user interfaces in the browser. Node.js runs JavaScript on the server for backend tasks like database handling, authentication, and APIs. Together, they create web apps with real-time updates and smooth user experiences.',
+    points: [
+      'Component-based UI for fast development',
+      'Server-side logic with Node.js and Express',
+      'Real-time data and API integration',
+    ],
   },
   {
-    title: 'Wellness Blog Layout',
-    description: 'Minimal layout for wellness topics.',
-    image: 'https://via.placeholder.com/400x240?text=Wellness+Blog',
-    tech: ['WordPress', 'SEO'],
-    status: 'Design Showcase',
+    title: 'Mobile Responsive Design',
+    icon: DevicePhoneMobileIcon,
+    image: 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-react/dashboard-page.png',
+    description:
+      'Mobile responsive design ensures your website looks great on phones, tablets, and desktops. Using Tailwind CSS or Bootstrap, layouts automatically adjust to screen sizes for a consistent and user-friendly experience everywhere.',
+    points: [
+      'Flexible layouts for all device sizes',
+      'Smooth user experience on mobile devices',
+      'Built with Tailwind CSS / Bootstrap',
+    ],
   },
   {
-    title: 'Portfolio Template',
-    description: 'A clean portfolio for developers.',
-    image: 'https://via.placeholder.com/400x240?text=Portfolio+Template',
-    tech: ['Next.js', 'Tailwind'],
-    status: 'Demo',
+    title: 'SEO Optimized Pages',
+    icon: MagnifyingGlassCircleIcon,
+    image: 'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-react/dashboard-page.png',
+    description:
+      'SEO (Search Engine Optimization) helps your website get noticed by Google and other search engines. Using meta tags, clean URLs, fast loading, and structured data, SEO improves your site’s ranking and brings more visitors.',
+    points: [
+      'Meta tags and clean URL structure',
+      'Fast loading and performance optimization',
+      'Structured data for rich search results',
+    ],
   },
 ];
 
 const Projects = () => {
-  const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (!scrollRef.current) return;
-    const cardWidth = 192 + 16; // card width + gap
-    if (direction === 'left') {
-      scrollRef.current.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-    } else {
-      scrollRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="projects" className="py-16 px-6 bg-white relative">
-      <div className="max-w-6xl mx-auto relative">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold mb-3">Demo Projects</h2>
-          <p className="text-gray-600 max-w-xl mx-auto text-sm">
-            A few concept designs to demonstrate the type of quality we deliver.
-          </p>
-        </div>
+    <section id='projects' className="bg-white py-20 px-6">
+      {/* Section Title with Animation */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="max-w-6xl mx-auto text-center mb-16"
+      >
+        <h2 className="text-4xl font-bold text-gray-800">Our Technology Services</h2>
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          Explore the technologies and development services we provide to build modern, responsive, and optimized websites and applications.
+        </p>
+      </motion.div>
 
-        {/* Prev Button */}
-        <button
-          onClick={() => scroll('left')}
-          aria-label="Scroll Left"
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow rounded-full p-3 z-10 hover:bg-gray-100 transition"
-          style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}
-        >
-          ◀
-        </button>
-
-        {/* Next Button */}
-        <button
-          onClick={() => scroll('right')}
-          aria-label="Scroll Right"
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow rounded-full p-3 z-10 hover:bg-gray-100 transition"
-          style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}
-        >
-          ▶
-        </button>
-
-        {/* Scroll Container with padding to create gap on sides */}
-        <div
-          ref={scrollRef}
-          className="overflow-x-auto hide-scrollbar scroll-smooth"
-          style={{
-            paddingLeft: '100px', // Adjust gap for left button + space
-            paddingRight: '100px', // Adjust gap for right button + space
-          }}
-        >
-          <div className="flex gap-4 w-max">
-            {projects.map((project, idx) => (
-              <div
-                key={idx}
-                className="min-w-[192px] max-w-[192px] bg-gray-50 rounded-lg overflow-hidden shadow hover:shadow-lg transition transform hover:-translate-y-1 duration-300"
-              >
+      <div className="space-y-20">
+        {services.map((service, index) => {
+          const Icon = service.icon;
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ delay: index * 0.2, duration: 0.6, ease: 'easeOut' }}
+              viewport={{ once: true, amount: 0.3 }}
+              className={`flex flex-col md:flex-row items-center gap-10 ${
+                index % 2 !== 0 ? 'md:flex-row-reverse' : ''
+              }`}
+            >
+              {/* Image */}
+              <div className="md:w-1/2">
                 <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-28 object-cover"
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full rounded-xl shadow-md"
                 />
-                <div className="p-4">
-                  <h4 className="text-md font-semibold mb-1">{project.title}</h4>
-                  <p className="text-gray-600 text-xs mb-1">{project.description}</p>
-                  <p className="text-xs text-gray-500">
-                    <strong>Tech:</strong> {project.tech.join(', ')}
-                  </p>
-                  <span className="mt-2 inline-block text-[11px] bg-indigo-100 text-indigo-700 px-2 py-[2px] rounded-full">
-                    {project.status}
-                  </span>
-                </div>
               </div>
-            ))}
-          </div>
-        </div>
+
+              {/* Content */}
+              <div className="md:w-1/2">
+                <div className="flex items-center gap-4 mb-4">
+                  <motion.div
+                    animate={{ y: [0, -15, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                  >
+                    <Icon className="h-10 w-10 text-blue-600" />
+                  </motion.div>
+                  <h3 className="text-2xl font-bold text-gray-800">{service.title}</h3>
+                </div>
+
+                <p className="text-gray-600 mb-4">{service.description}</p>
+
+                {/* Staggered List Items */}
+                <motion.ul
+                  initial="hidden"
+                  whileInView="visible"
+                  variants={{
+                    hidden: {},
+                    visible: {
+                      transition: {
+                        staggerChildren: 0.15,
+                      },
+                    },
+                  }}
+                  viewport={{ once: true }}
+                  className="list-disc pl-5 space-y-1 text-sm text-gray-700"
+                >
+                  {service.points.map((point, idx) => (
+                    <motion.li
+                      key={idx}
+                      variants={{
+                        hidden: { opacity: 0, x: -10 },
+                        visible: { opacity: 1, x: 0 },
+                      }}
+                      transition={{ duration: 0.4, ease: 'easeOut' }}
+                    >
+                      {point}
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

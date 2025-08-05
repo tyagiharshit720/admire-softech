@@ -8,6 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="space-y-4">
+            
             <h3 className="text-2xl font-bold">
               <span className="text-amber-400">Admire</span>
               <span>Softech</span>
@@ -47,11 +48,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/services/web-development" className="text-blue-200 hover:text-white transition">Web Development</Link></li>
-              <li><Link to="/services/mobile-apps" className="text-blue-200 hover:text-white transition">Mobile Apps</Link></li>
-              <li><Link to="/services/ui-ux" className="text-blue-200 hover:text-white transition">UI/UX Design</Link></li>
-              <li><Link to="/services/cloud" className="text-blue-200 hover:text-white transition">Cloud Solutions</Link></li>
-              <li><Link to="/services/consulting" className="text-blue-200 hover:text-white transition">IT Consulting</Link></li>
+              <li><Link to="/services" className="text-blue-200 hover:text-white transition">Web Development</Link></li>
+              <li><Link to="/services" className="text-blue-200 hover:text-white transition">Mobile Apps</Link></li>
+              <li><Link to="/services" className="text-blue-200 hover:text-white transition">UI/UX Design</Link></li>
+              <li><Link to="/services" className="text-blue-200 hover:text-white transition">Cloud Solutions</Link></li>
+              <li><Link to="/services" className="text-blue-200 hover:text-white transition">IT Consulting</Link></li>
             </ul>
           </div>
 
@@ -72,7 +73,21 @@ const Footer = () => {
                 info@admiresoftech.com
               </p>
             </address>
+            {/* Legal Links */}
+              <ul className="space-y-2 ml-2 mt-2">
+                <li>
+                  <Link to="/privacy-policy" className="text-blue-200 hover:text-white transition">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/terms-and-conditions" className="text-blue-200 hover:text-white transition">
+                    Terms & Conditions
+                  </Link>
+                </li>
+              </ul>
           </div>
+          
         </div>
 
         {/* Copyright */}

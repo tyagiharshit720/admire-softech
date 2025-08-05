@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { color, motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { icon } from '@fortawesome/fontawesome-svg-core';
 
 const OurService = () => {
   const controls = useAnimation();
@@ -45,43 +46,50 @@ const OurService = () => {
       icon: "💻",
       title: "Custom Software",
       description: "Tailored solutions designed for your unique business needs with cutting-edge technology.",
-      color: "from-blue-500 to-blue-700",
+      color: "from-blue-300 to-blue-500",
       features: ["Bespoke development", "Enterprise solutions", "Workflow automation"]
     },
     {
       icon: "📱",
       title: "Mobile Apps",
       description: "Innovative applications for iOS and Android platforms with native performance.",
-      color: "from-purple-500 to-purple-700",
+      color: "from-purple-300 to-purple-500",
       features: ["Cross-platform apps", "UI/UX design", "App store optimization"]
     },
     {
       icon: "☁️",
       title: "Cloud Solutions",
       description: "Scalable cloud infrastructure and migration services for modern businesses.",
-      color: "from-indigo-500 to-indigo-700",
+      color: "from-indigo-300 to-indigo-500",
       features: ["AWS/Azure/GCP", "Serverless architecture", "Cloud security"]
     },
     {
       icon: "🔍",
       title: "Data Analytics",
       description: "Transform your data into actionable insights with powerful analytics tools.",
-      color: "from-teal-500 to-teal-700",
+      color: "from-green-500 to-teal-500",
       features: ["BI dashboards", "Predictive analytics", "Data visualization"]
     },
     {
       icon: "🤖",
       title: "AI Integration",
       description: "Leverage artificial intelligence to automate processes and enhance decision-making.",
-      color: "from-rose-500 to-rose-700",
+      color: "from-rose-300 to-red-500",
       features: ["Machine learning", "Chatbots", "Computer vision"]
     },
+    // {
+    //   icon: "🛡️",
+    //   title: "Cyber Security",
+    //   description: "Comprehensive protection for your digital assets and infrastructure.",
+    //   color: "from-amber-500 to-amber-700",
+    //   features: ["Penetration testing", "Security audits", "Threat monitoring"]
+    // },
     {
-      icon: "🛡️",
-      title: "Cyber Security",
-      description: "Comprehensive protection for your digital assets and infrastructure.",
-      color: "from-amber-500 to-amber-700",
-      features: ["Penetration testing", "Security audits", "Threat monitoring"]
+      icon:"🤖",
+      title:"Hello Testing",
+      description:"I am doinh this beacuse i want to practice on this",
+      color:"from-amber-300 to-orange-500",
+      features: ["abc","dcs"]
     }
   ];
 
