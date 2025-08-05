@@ -168,7 +168,7 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-indigo-600 to-orange-500 hover:from-indigo-700 hover:to-orange-600 text-white px-8 py-2 rounded-lg font-semibold text-lg transition-transform transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+          className="w-2/5 mx-auto bg-gradient-to-r from-indigo-600 to-orange-500 hover:from-indigo-700 hover:to-orange-600 text-white px-8 py-2 rounded-lg font-semibold text-lg transition-transform transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
         >
           <Send className="h-5 w-5" />
           <span>Send Message</span>

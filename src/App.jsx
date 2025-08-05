@@ -9,6 +9,8 @@ import ApplicationForm from './forms/ApplicationForm';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
 
 const App = () => {
   return (
@@ -22,7 +24,9 @@ const App = () => {
         <Route path="/application-form" element={<ApplicationForm />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
-        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />}/>
         
         
 
