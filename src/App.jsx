@@ -11,11 +11,14 @@ import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
+import AutoSlider from './components/AutoSlider';
 
 const App = () => {
   return (
     <div>
       <NavBar />
+        <AutoSlider/>
+
       
       <Routes>
         <Route path="/" element={<Home />} />
