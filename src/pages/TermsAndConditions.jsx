@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsAndConditions = () => {
   return (
-    <div className="container mx-auto px-4 py-12 text-gray-800">
+    <div className="container mx-auto px-4 py-12 text-gray-800 text-center">
       <h1 className="text-3xl font-bold mb-6">Terms & Conditions</h1>
       <p className="mb-4">
         These Terms and Conditions govern your use of the Admire Softech website and services. By accessing or using our services, you agree to be bound by these terms.

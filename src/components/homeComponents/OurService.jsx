@@ -42,56 +42,50 @@ const OurService = () => {
   };
 
   const services = [
-    {
-      icon: "💻",
-      title: "Custom Software",
-      description: "Tailored solutions designed for your unique business needs with cutting-edge technology.",
-      color: "from-blue-300 to-blue-500",
-      features: ["Bespoke development", "Enterprise solutions", "Workflow automation"]
-    },
-    {
-      icon: "📱",
-      title: "Mobile Apps",
-      description: "Innovative applications for iOS and Android platforms with native performance.",
-      color: "from-purple-300 to-purple-500",
-      features: ["Cross-platform apps", "UI/UX design", "App store optimization"]
-    },
-    {
-      icon: "☁️",
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services for modern businesses.",
-      color: "from-indigo-300 to-indigo-500",
-      features: ["AWS/Azure/GCP", "Serverless architecture", "Cloud security"]
-    },
-    {
-      icon: "🔍",
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights with powerful analytics tools.",
-      color: "from-green-500 to-teal-500",
-      features: ["BI dashboards", "Predictive analytics", "Data visualization"]
-    },
-    {
-      icon: "🤖",
-      title: "AI Integration",
-      description: "Leverage artificial intelligence to automate processes and enhance decision-making.",
-      color: "from-rose-300 to-red-500",
-      features: ["Machine learning", "Chatbots", "Computer vision"]
-    },
-    // {
-    //   icon: "🛡️",
-    //   title: "Cyber Security",
-    //   description: "Comprehensive protection for your digital assets and infrastructure.",
-    //   color: "from-amber-500 to-amber-700",
-    //   features: ["Penetration testing", "Security audits", "Threat monitoring"]
-    // },
-    {
-      icon:"🤖",
-      title:"Hello Testing",
-      description:"I am doinh this beacuse i want to practice on this",
-      color:"from-amber-300 to-orange-500",
-      features: ["abc","dcs"]
-    }
-  ];
+  {
+    icon: "🌐",
+    title: "Website Development",
+    description: "Full-stack website development tailored to your brand and business goals.",
+    color: "from-blue-300 to-blue-500",
+    features: ["Frontend & backend", "Responsive design", "Performance optimization"]
+  },
+  {
+    icon: "🎨",
+    title: "UI/UX Design",
+    description: "User-centered designs to ensure engaging and intuitive digital experiences.",
+    color: "from-pink-300 to-pink-500",
+    features: ["Wireframes & prototypes", "User journey mapping", "Mobile-first design"]
+  },
+  {
+    icon: "📈",
+    title: "SEO Services",
+    description: "Search engine optimization to improve visibility and drive organic traffic.",
+    color: "from-green-400 to-green-600",
+    features: ["Keyword research", "Technical SEO", "On-page & off-page optimization"]
+  },
+  {
+    icon: "🚀",
+    title: "Hosting & Deployment",
+    description: "Secure and scalable hosting solutions with fast and reliable deployment.",
+    color: "from-indigo-300 to-indigo-500",
+    features: ["Cloud & shared hosting", "CI/CD pipelines", "Domain & SSL setup"]
+  },
+  {
+    icon: "🛠️",
+    title: "Maintenance & Support",
+    description: "Ongoing support to keep your website secure, updated, and running smoothly.",
+    color: "from-orange-400 to-red-400",
+    features: ["Bug fixes", "Regular updates", "Performance monitoring"]
+  },
+  {
+    icon: "🧩",
+    title: "CMS Integration",
+    description: "Flexible content management solutions for easy website updates and scalability.",
+    color: "from-yellow-300 to-yellow-500",
+    features: ["WordPress & Headless CMS", "Custom themes & plugins", "User-friendly admin panel"]
+  }
+];
+
 
   return (
     <section id="services" className="py-24 bg-gradient-to-b from-gray-50 to-white">
